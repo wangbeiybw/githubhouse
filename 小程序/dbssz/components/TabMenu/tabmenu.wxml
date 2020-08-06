@@ -1,0 +1,30 @@
+ <view class="viewnav">
+    <view wx:for="{{tabtitle}}" bindtap="bindAllqy"
+     wx:key="key" wx:for-item="item" data-id = "{{index}}" 
+     class="{{_num==index?'bluetext':''}}">{{item}} <text class="fa {{_num==index && showIndex==index?'fa-caret-up':'fa-caret-down'}}"></text></view>
+ </view>
+<!---浮动层--->
+<view class="floatview" wx:if="{{showIndex==0}}">
+      <view class="viewcolum">
+          <text wx:for="{{formultiArray[0]}}" wx:key="key" wx:for-item="item" wx:key="index" class="{{index==currid ? 'current':''}}" bindtap="changesheng" data-index = "{{index}}" id="{{currid}}">{{item}}</text>
+      </view>
+      <view class="viewcolum">
+            <view wx:for="{{formultiArray[1]}}" wx:key="key" wx:for-item="item" wx:key="index" class="textchildren" bindtap="changshi" data-shindex = "{{index}}">
+            <text class="{{index==shiid ? 'current':''}}">{{item}}</text>
+            <text class='fa fa-check' wx:if="{{index==shiid}}"></text>
+            </view>
+      </view>
+</view>
+<!---浮动层--->
+<!---浮动层--所属流域--->
+<view class="floatview  lyfloat" wx:if="{{showIndex==1}}">
+      <view class="lytext {{index==lyid ? 'bluetext':''}}"  wx:for="{{lyarray}}" wx:key="key" wx:for-item="item" bindtap="bindliuyu" data-lyindex = "{{index}}">{{item.text}}</view>
+</view>
+<!---浮动层--->
+<!---浮动层--断面名称--->
+  <view class="floatview" wx:if="{{showIndex==2}}">
+      <view class="viewcolum" style="background:white">
+            <text class="{{index==dmid ? 'current':''}}"  wx:for="{{dmarray}}" wx:key="key" wx:for-item="item" bindtap="binddm" data-dmindex = "{{index}}">{{item.text}}</text>
+      </view>
+</view>
+<!---浮动层--->

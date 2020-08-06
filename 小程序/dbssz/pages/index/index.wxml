@@ -1,0 +1,37 @@
+<!--index.wxml{{multiArray[1][multiIndex[1]]}}-->
+<view class="viewmodel">
+    <view class="searchmodel">
+          <text class='fa fa-search' bindtap='bindsearch'></text>
+          <input placeholder="请输入关键字..." style="" bindinput="bindinput" value="{{inputvalue}}"></input>
+    </view>
+    <view class='search_title' style="position: relative;padding:35rpx 0 0 0;margin-top:-10rpx">
+         <TabMenu tabtitle="{{['全部区域','所属流域','断面名称']}}" formultiArray="{{multiArray}}" forobjmultiArray="{{objectMultiArray}}"></TabMenu>
+    </view>
+</view>
+<view class="container"> 
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">断面名称</view>
+      <view class="th">监测时间</view>
+      <view class="th ">水质类别</view>
+</view>
+<view style="height:100%;overflow:hidden;">
+ <swiper class="tab-right" vertical="true" autoplay="true" circular="true" interval="1000" display-multiple-items='20' style="height:1400rpx">
+    <block wx:for="{{listData}}" wx:key="key" wx:for-item="items">
+     <swiper-item >
+          <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap="bindClick" data-index="{{items.id}}">
+              <view class="td">{{items.dmmc}}</view>
+              <view class="td">{{items.jcsj}}</view>
+              <view class="td"><text class="szlb {{items.lbcolor}}">{{items.szlb}}</text></view>
+          </view>
+          <view class="tr bg-w" wx:else data-index="{{items.id}}" bindtap="bindClick" data-index="{{items.id}}">
+              <view class="td">{{items.dmmc}}</view>
+              <view class="td">{{items.jcsj}}</view>
+              <view class="td"><text class="szlb {{items.lbcolor}}">{{items.szlb}}</text></view>
+          </view>
+        </swiper-item>
+    </block>
+    </swiper>
+    </view>
+  </view>
+</view>

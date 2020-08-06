@@ -1,0 +1,72 @@
+<!--pages/detial.wxml-->
+<view class="baseline"></view>
+<view class="pageauto">
+    <view class="ListUL">
+        <text class="ListLi_left">省份</text>
+        <text class="ListLi_right">{{resultData.sfmc}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">流域</text>
+        <text class="ListLi_right">{{resultData.sly}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">断面名称</text>
+        <text class="ListLi_right">{{resultData.dmmc}}</text>
+    </view>
+     <view class="ListUL">
+        <text class="ListLi_left">监测时间</text>
+        <text class="ListLi_right">{{resultData.cjsj}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">水质类别</text>
+        <text class="ListLi_right szlb"  style="width:100rpx;text-align:center;margin: 0;background:{{resultData.szlbcolor}}">{{resultData.szlb}}</text>
+    </view>
+     <view class="ListUL">
+        <text class="ListLi_left">水温(℃)</text>
+        <text class="ListLi_right">{{resultData.sw}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">pH(无量纲)</text>
+        <text class="ListLi_right">{{resultData.ph}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">溶解氧(mg/L)</text>
+        <text class="ListLi_right">{{resultData.rjy}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">电导率(μS/cm)</text>
+        <text class="ListLi_right">{{resultData.ddl}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">浊度(NTU)</text>
+        <text class="ListLi_right">{{resultData.zdz}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">高锰酸盐指数(mg/L)</text>
+        <text class="ListLi_right">{{resultData.gmsyzs}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">氨氮(mg/L)</text>
+        <text class="ListLi_right">{{resultData.adl}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">总磷(mg/L)</text>
+        <text class="ListLi_right">{{resultData.zll}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">总氮(mg/L)</text>
+        <text class="ListLi_right">{{resultData.zdl}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">叶绿素α(mg/L)</text>
+        <text class="ListLi_right">{{resultData.yls}}</text>
+    </view>
+     <view class="ListUL">
+        <text class="ListLi_left">藻密度(cells/L)</text>
+        <text class="ListLi_right">{{resultData.zmd}}</text>
+    </view>
+    <view class="ListUL">
+        <text class="ListLi_left">站点情况</text>
+        <text class="ListLi_right">{{resultData.zdqk}}</text>
+    </view>
+</view>

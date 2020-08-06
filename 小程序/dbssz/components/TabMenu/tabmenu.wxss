@@ -1,0 +1,11 @@
+.viewnav{display: flex;flex-direction: row;justify-content: space-around;}
+.floatview{position: absolute;width: 100%;height:800rpx;background:#f4f4f4;top:85rpx;display: flex; flex-direction: row;z-index: 999;}
+ .floatview .viewcolum{width: 250rpx;height:100%;background: white;margin-top:1px;overflow: auto;}
+ .viewcolum text{display: block;padding:20rpx}
+ .viewcolum:last-child{background:#fafafa;}
+ .current{background: #fafafa;color:#1d91f9}
+ .fa-check{color:#1d91f9}
+ .fa-caret-up,.bluetext{color:#1d91f9}
+ .textchildren{display: flex; flex-direction: row; justify-content: space-between;align-items: center;}
+ .lyfloat{display: flex;flex-wrap: wrap;height: auto;padding: 20rpx;background: white;border-top:1px solid #e6e6e6;}
+ .lytext{line-height:65rpx;width: 180rpx; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;margin-right:5rpx}

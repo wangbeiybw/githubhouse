@@ -1,0 +1,4 @@
+/* pages/detial.wxss */
+.ListUL{display: flex; flex-direction: row;justify-content: space-between;padding:20rpx;border-bottom: 1px solid #e6e6e6;}
+.ListLi_left{font-weight: bold;}
+.ListLi_right{color:#666}
